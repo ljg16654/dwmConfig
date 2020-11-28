@@ -30,6 +30,7 @@ const char *spcmd2[] = {"st",    "-n", "calc",    "-g",
                         "80x34", "-e", "wolfram", NULL};
 const char *spcmd3[] = {"electron-ssr", NULL};
 const char *eccmd[] = {"emacsclient", "-c", NULL};
+const char *toggletouchpadcmd[] = {"~/.dwm/toggleTouchpad.sh", NULL};
 
 static Sp scratchpads[] = {
     /*  name         cmd */
@@ -97,6 +98,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = eccmd } },
+	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = toggletouchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
