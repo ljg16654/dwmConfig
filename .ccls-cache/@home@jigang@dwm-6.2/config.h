@@ -2,6 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx = 8; /* border pixel of windows */
+static const int gappx = 15;             /* gaps between windows */
 static const unsigned int snap = 32;    /* snap pixel */
 static const int showbar = 1;           /* 0 means no bar */
 static const int topbar = 0;            /* 0 means bottom bar */
@@ -98,7 +99,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = eccmd } },
-    { MODKEY|ShiftMask,             XK_t,      spawn,          {.v = toggletouchpadcmd } },
+	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = toggletouchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
